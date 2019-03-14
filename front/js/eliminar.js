@@ -24,9 +24,9 @@ document.getElementById('tbody').addEventListener('click', e =>{
 		    console.log('Request failure: ', error);
 		    
 		  });
-		}
+		}else location.reload();
 			});//eliminar
-			
+
 
 		}//if
 
@@ -50,12 +50,12 @@ fetch('http://localhost:8080/api/contactos/'+ contacto_id, {
 					let tel2_c = document.createElement('p');
 					let correo2_c = document.createElement('p');
 					let fecha_c = document.createElement('p');
-					nombre_c.innerHTML = `Nombre: ${contacto.nombre_contacto}`.toUpperCase();
-					tel_c.innerHTML = `Telefono Personal: ${contacto.telefono_p}`.toUpperCase();
-					correo_c.innerHTML = `Correo Personal: ${contacto.correo_p}`.toUpperCase();
-					tel2_c.innerHTML = `Telefono Trabajo: ${contacto.telefono_o}`.toUpperCase();
-					correo2_c.innerHTML = `Correo Trabajo: ${contacto.correo_o}`.toUpperCase();
-					fecha_c.innerHTML = `Cumpleaños: ${contacto.fecha_nacimiento}`.toUpperCase();
+					nombre_c.innerHTML = `<strong>Nombre:</strong> ${contacto.nombre_contacto}`.toUpperCase();
+					tel_c.innerHTML = `<strong>Telefono Personal:</strong> ${contacto.telefono_p}`.toUpperCase();
+					correo_c.innerHTML = `<strong>Correo Personal:</strong> ${contacto.correo_p}`.toUpperCase();
+					tel2_c.innerHTML = `<strong>Telefono Trabajo:</strong> ${contacto.telefono_o}`.toUpperCase();
+					correo2_c.innerHTML = `<strong>Correo Trabajo:</strong> ${contacto.correo_o}`.toUpperCase();
+					fecha_c.innerHTML = `<strong>Cumpleaños:</strong> ${contacto.fecha_nacimiento}`.toUpperCase();
 					div_contacto.appendChild(nombre_c);
 					div_contacto.appendChild(tel_c);
 					div_contacto.appendChild(correo_c);
