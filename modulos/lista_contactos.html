@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Administrador De Contactos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>Bienvenido al Administrador de Contactos</h1>
+</div>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">ADCONTACT</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="nuevo_contacto.html">Nuevo Contacto</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="lista_contactos.html">Lista de Contactos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="buscar_contactos.html">Busqueda de Contactos</a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" style="float: left;"href="../index.html">Salir</a>
+      </li> 
+    </ul>
+  </div>  
+</nav>
+
+<div class="container" id="contacto">
+  <h2>Lista de Contactos</h2>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Teléfono Personal</th>
+        <th>Correo Personal</th>
+        <th>Teléfono de Trabajo</th>
+        <th>Correo de Trabajo</th>
+        <th>Cumpleaños</th>
+        <th>Editar</th>
+        <th>Borrar</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      
+    </tbody>
+  </table>
+ 
+
+<!--  Modal Editar-->
+  <div class="modal fade" id="Editar">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+
+        <div class="modal-header">
+          <h4 class="modal-title">Editar Contacto</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+
+        <div class="modal-body">
+  <form id="form_editar">
+    <div class="form-group">
+      <label for="nombre_contacto">Nombre Completo:</label>
+      <input type="text" class="form-control" id="nombre_contacto" placeholder="Ingresa Nombre" name="nombre_contacto">
+    </div>
+    <div class="form-group">
+      <label for="telefono_p">Teléfono Personal:</label>
+      <input type="tel" class="form-control" id="telefono_p" placeholder="Ingresa Teléfono Personal" name="telefono_p">
+    </div>
+    
+    <div class="form-group">
+      <label for="correo_p">Correo Personal:</label>
+      <input type="email" class="form-control" id="correo_p" placeholder="Ingresa Correo Personal" name="correo_p">
+    </div>
+    <div class="form-group">
+      <label for="telefono_o">Teléfono de Trabajo:</label>
+      <input type="tel" class="form-control" id="telefono_o" placeholder="Ingresa Teléfono de Trabajo" name="telefono_o">
+    </div>
+    <div class="form-group">
+      <label for="correo_o">Correo de Trabajo:</label>
+      <input type="email" class="form-control" id="correo_o" placeholder="Ingresa Correo de Trabajo" name="correo_o">
+    </div>
+    <div class="form-group">
+      <label for="fecha_nacimiento">Cumpleaños:</label>
+      <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento">
+    </div>
+    <button class="btn btn-primary" id="btn_nActualizar" is="mi-boton">Actualizar</button>
+    <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+  </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+        
+<!-- fin modal editar-->
+<!-- modal eliminar-->
+<div class="modal fade" id="Eliminar">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+
+        <div class="modal-header">
+          <h4 class="modal-title">¿Estas seguro de eliminar Este contacto?</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+         <div class="modal-body" id="verContacto">
+
+         </div>
+         <div class="modal-footer" >
+          <button type="button" class="btn btn-danger elim" data-dismiss="modal" >Eliminar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- fin eliminar-->
+</div>
+<footer>
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Desarrollado por Luis Santiago &copy; 2019</p>
+</div>
+</footer>
+<script src="../js/lista_contactos.js"></script>
+<script src="../js/eliminar.js"></script>
+<script src="../js/actualizar.js"></script>
+</body>
+</html>

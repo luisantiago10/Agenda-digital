@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Administrador De Contactos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>Bienvenido al Administrador de Contactos</h1>
+</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">ADCONTACT</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+</nav>
+<div class="container">
+  <h2>Iniciar Sesión</h2>
+  <form action="./modulos/ingreso.html" method="post">
+    <div class="form-group">
+      <label for="usuario">Usuario:</label>
+      <input type="text" class="form-control" id="usuario" placeholder="Ingresa usuario" name="usuario">
+    </div>
+    <div class="form-group">
+      <label for="password">Contraseña:</label>
+      <input type="password" class="form-control" id="password" placeholder="Ingresa contraseña" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Desarrollado por Luis Santiago &copy; 2019</p>
+</div>
+
+</body>
+</html>
